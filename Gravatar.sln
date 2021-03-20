@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{08068B0A-37A8-47F7-BD50-4A15C4EB7B3C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		CustomCodeAnalysisRules.ruleset = CustomCodeAnalysisRules.ruleset
+		Directory.Build.props = Directory.Build.props
+		LICENSE.md = LICENSE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3311D480-9508-4B11-848C-4C4A1116199C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{375CC7E9-509C-4B5C-B93D-E51CC3B75833}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gravatar", "src\Gravatar\Gravatar.csproj", "{50D6025B-3203-4058-9C13-1C674E0D8419}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gravatar.UnitTests", "tests\Gravatar.UnitTests\Gravatar.UnitTests.csproj", "{19097BC1-4EBD-4479-AE09-A0128F004630}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50D6025B-3203-4058-9C13-1C674E0D8419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D6025B-3203-4058-9C13-1C674E0D8419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D6025B-3203-4058-9C13-1C674E0D8419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D6025B-3203-4058-9C13-1C674E0D8419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19097BC1-4EBD-4479-AE09-A0128F004630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19097BC1-4EBD-4479-AE09-A0128F004630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19097BC1-4EBD-4479-AE09-A0128F004630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19097BC1-4EBD-4479-AE09-A0128F004630}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50D6025B-3203-4058-9C13-1C674E0D8419} = {3311D480-9508-4B11-848C-4C4A1116199C}
+		{19097BC1-4EBD-4479-AE09-A0128F004630} = {375CC7E9-509C-4B5C-B93D-E51CC3B75833}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B315E817-90F1-4E0A-A8C4-6A18AFF0C7DB}
+	EndGlobalSection
+EndGlobal
