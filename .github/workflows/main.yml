@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    name: Build and deploy package
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.x'
+    - name: Restore
+      run: dotnet restore
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
+    - name: Create package
+      run: dotnet pack --configuration Release --output ./nuget-packages --no-restore
+    - name: Deploy package
+      run: dotnet nuget push "./nuget-packages/LucasRosinelli.Gravatar.1.0.0.nupkg" --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json
